@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+main()
+{
+  char string[100];
+  int a,i;
+  clrscr();
+  printf("Enter the string: \n");
+  scanf("%s",string);
+  a=strlen(string);
+  if(a%2!=0)
+  {
+    for(i=a;i>=a-2;i--)
+    {
+      string[i]='O';
+    }
+  }
+  for(i=0;i<a;i++)
+  {
+    if(string[i]=='i')
+      string[i]='e';
+    if(string[i]=='a')
+      string[i]='u';
+    printf("%c",string[i]);
+  }
+  getch();
+}
